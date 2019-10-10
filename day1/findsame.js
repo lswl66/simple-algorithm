@@ -1,16 +1,11 @@
 function getSameNumber (arr1,arr2) {
     var insideArr1 = arr1;
     var insideArr2 = arr2;
-    var sameNumberArr = [];
     var finallyArr = [];
     for (var i = 0; i < insideArr1.length; i++) {
-        if (insideArr2.indexOf(insideArr1[i]) != -1){
-            sameNumberArr.push(insideArr1[i]);
-        }
-    }
-    for (var j = 0; j < sameNumberArr.length; j++) {
-        if (finallyArr.indexOf(sameNumberArr[j]) == -1){
-            finallyArr.push(sameNumberArr[j]);
+        if (insideArr2.indexOf(insideArr1[i]) != -1 
+            && finallyArr.indexOf(insideArr1[i]) == -1){
+            finallyArr.push(insideArr1[i]);
         }
     }
     return finallyArr;
