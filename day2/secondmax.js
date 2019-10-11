@@ -21,6 +21,8 @@ function getSecondMax(arr) {
         if (theMax < noRepeatArr[j]) {
             theSecondMax = theMax;
             theMax = noRepeatArr[j];
+        }else if (theSecondMax < noRepeatArr[j]) {
+            theSecondMax = noRepeatArr[j];
         }
     }
     return theSecondMax;
